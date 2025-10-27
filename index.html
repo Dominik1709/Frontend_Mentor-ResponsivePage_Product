@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100svh;
+        background-color: antiquewhite;
+      }
+      .product {
+        display: block;
+        max-width: 375px;
+        width: 100%;
+        overflow: hidden;
+        background-color: white;
+        border-radius: 1em;
+      }
+      .slika {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .description {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+      .description button {
+        background-color: hsl(158, 36%, 37%);
+        color: white;
+        border: none;
+        border-radius: 0.5em;
+        padding: 10px 20px;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        margin: auto;
+        margin-top: 5px;
+        width: 100%;
+        cursor: pointer;
+      }
+      .description button:hover {
+        background-color: darkgreen;
+      }
+      .description p {
+        color: hsl(228, 12%, 48%);
+        font-size: 15px;
+      }
+      .description h2 {
+        color: hsl(158, 36%, 37%);
+        font-size: 24px;
+      }
+      .description h2 span {
+        text-decoration: line-through;
+        color: hsl(228, 12%, 48%);
+        font-size: 14px;
+        margin-left: 10px;
+        font-weight: normal;
+      }
+
+      .attribution {
+        margin: 5px;
+        font-size: 20px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      @media (min-width: 768px) {
+        .product {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          max-width: 600px;
+        }
+
+        .description {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="product">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              /product-preview-card-component-main/images/image-product-desktop.jpg
+            "
+          />
+
+          <img class="slika" src="/images/image-product-mobile.jpg" />
+        </picture>
+        <div class="description">
+          <p>PERFUME</p>
+          <h1>Gabrielle Essence Eau De Parfum</h1>
+          <p>
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <h2>$149.99 <span> $169.99</span></h2>
+          <button>
+            <img src="/images/icon-cart.svg" />
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Dominik Lovrecic</a>.
+    </div>
+  </body>
+</html>
